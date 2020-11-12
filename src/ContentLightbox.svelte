@@ -61,6 +61,9 @@
   <div class="content">
     <h1>{data.title}</h1>
     <p>{@html data.content}</p>
+    {#if data.link}
+      <p>Link: <a href={data.link}>{data.link.replace(/^https?:\/\//i, '')}</a></p>
+    {/if}
     {#if data.frame}
       <IFrame url={data.frame.url} title={data.frame.title} />
     {/if}
