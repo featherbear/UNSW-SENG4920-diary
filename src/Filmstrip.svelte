@@ -13,21 +13,20 @@
 <style>
   .filmstrip {
     width: 200px;
-    background-color: var(--stripColour);
     max-height: 100%;
-    overflow-y: scroll;
-    padding: 15px;
-    border-radius: 5px;
 
+    background-color: var(--stripColour);
+    
+    padding: 15px;
+    margin: 0 calc(var(--bMargin) / 2) var(--bMargin) calc(var(--bMargin) / 2);
+    
+    border-radius: 5px;
+    overflow-y: scroll;
     cursor: pointer;
 
     -webkit-box-shadow: 1px 3px 22px 0px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 1px 3px 22px 0px rgba(0, 0, 0, 0.3);
     box-shadow: 1px 3px 22px 0px rgba(0, 0, 0, 0.3);
-  }
-
-  .filmstrip:not(:last-child) {
-    margin-right: 30px;
   }
 
   .spacer:not(:first-child) {

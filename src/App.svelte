@@ -42,7 +42,7 @@
     flex-direction: column;
     
     padding: 10px 0;
-    margin-bottom: 15px;
+    margin-bottom: var(--bMargin);
 
     font-family: 'Open Sans';
   }
