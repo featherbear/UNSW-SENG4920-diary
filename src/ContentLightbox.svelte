@@ -1,4 +1,6 @@
 <script>
+  import IFrame from "./PreviewIFrame.svelte"
+
   import { createEventDispatcher } from "svelte";
   const dispatch = createEventDispatcher();
 
@@ -59,5 +61,8 @@
   <div class="content">
     <h1>{data.title}</h1>
     <p>{data.content}</p>
+    {#if data.frame}
+      <IFrame url={data.frame.url} title={data.frame.title} />
+    {/if}
   </div>
 </div>
