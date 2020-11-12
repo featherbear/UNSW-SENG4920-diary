@@ -1,27 +1,12 @@
-Filmstrip Messages
+# UNSW SENG4920 Project Diary
 ---
 
-A ready-to-go filmstrip photo gallery
+[Click for website view](https://featherbear.cc/UNSW-SENG4920-diary)
 
-This project was build with the [Svelte](https://svelte.dev/) framework
+> Presented wth my [Filmstrip Messages](https://github.com/featherbear/filmstrip-messages) project for the fun of it
 
-# Running
+----
 
-```
-npm install
-npm run start
-```
-
-# Development
-
-```
-npm install
-npm run dev
-```
-
-# Building a static version
-
-```
-npm install
-npm run build
-```
+* [Splitify Web App](https://splitify.github.io)
+* [Splitify Source Code](https://github.com/Splitify/splitify)
+* [Team Splitify](https://github.com/splitify/)
