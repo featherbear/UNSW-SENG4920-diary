@@ -10,7 +10,16 @@
 
   import { fade } from "svelte/transition";
 
+  let commitID = ""
+  let link = "";
   export let data;
+  $: {
+    link = (data.link || "").replace(/^https?:\/\//i, '')
+    let regex = /^github.com\/.+?\/blob\/(.+?)\//i.exec(link)
+    if (regex) {
+      commitID = regex[1].slice(0, 8)
+    }
+  }
 </script>
 
 <style>
@@ -74,7 +83,11 @@
       {/if}
     {/if}
     {#if data.link}
-      <p>Link: <a href={data.link}>{data.link.replace(/^https?:\/\//i, '')}</a></p>
+        {#if commitID}
+          <p>Commit: <a href={data.link}>{commitID}</a></p>
+        {:else}
+          <p>Link: <a href={data.link}>{link}</a></p>
+        {/if}
     {/if}
     {#if data.frame}
       <IFrame url={data.frame.url} title={data.frame.title} />
