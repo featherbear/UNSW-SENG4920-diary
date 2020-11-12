@@ -137,7 +137,8 @@ export default [
         title: 'Friday (Meeting)',
         date: '23/10/2020',
         content: [
-          'Outstanding UI and UX design questions were discussed and resolved'
+          'Outstanding UI and UX design questions were discussed and resolved',
+          'Playlist filtering delayed to the Week 7 sprint - no affect on other stories and tasks'
         ]
       },
       {
@@ -157,8 +158,9 @@ export default [
         title: 'Thursday',
         date: '29/10/2020',
         content: [
-          'Implement track re-ordering with <a href="https://react-beautiful-dnd.netlify.app/"><pre>react-beautiful-dnd</pre></a>',
-          'Auto-load playlists when the playlist selector is opened'
+          'Implement track reordering with <a href="https://react-beautiful-dnd.netlify.app/"><pre>react-beautiful-dnd</pre></a>',
+          'Auto-load playlists when the playlist selector is opened',
+          'Experienced difficulties with UI element alignment as a result of the Table component layout'
         ]
       },
       {
@@ -170,7 +172,8 @@ export default [
         title: 'Friday (Meeting)',
         date: '30/10/2020',
         content: [
-          'Discussed the need for correctly representing audio feature values (i.e. loudness should be in decibels rather than a percentage'
+          'Discussed the need for correctly representing audio feature values (i.e. loudness should be in decibels rather than a percentage',
+          'Playlist saving has not yet been completed, however this will not block any other features'
         ]
       },
       {
@@ -178,7 +181,8 @@ export default [
         date: '31/10/2020',
         content: [
           'Refactor the audio feature selector component',
-          'Refactor track listing from the Master Playlist and Sub-Playlist into a TrackList component'
+          'Refactor track listing from the Master Playlist and Sub-Playlist into a TrackList component',
+          'Refactors blocking the Playlist Saving story until the changes have been merged into master'
         ]
       }
     ]
@@ -198,7 +202,7 @@ export default [
         title: 'Monday',
         date: '2/11/2020',
         content: [
-          'Change Table format of the track listing into a List format, as it was more suitable',
+          'Change Table format of the track listing into a List format, as it was more suitable <i>(Refer to 29/10/2020)</i>',
           'Refactor Genre Selector and Feature Filter'
         ]
       },
@@ -225,7 +229,7 @@ export default [
         content: [
           'Concern raised about the lack of genre information in each track, as Spotify (falsely) claims to include genre data in each track. Rather it only includes this data in the artist data',
           'Team decided to retrieve genre data from the <a href="https://www.last.fm/api">Last.fm API</a>',
-          'Audience suggested the ability to select multiple playlists at the same time as a source pool'
+          'Stakeholders suggested the ability to select multiple playlists at the same time as a source pool'
         ]
       }
     ]
@@ -259,7 +263,7 @@ export default [
         date: '13/11/2020',
         content: [
           'Removed hardcoded adjacent component heights, and implement height calculation that respects adjacent components'
-          // 'Move playlist actions into the actions bar'
+          'Moved playlist sort button into the actions bar'
         ]
       }
     ]
