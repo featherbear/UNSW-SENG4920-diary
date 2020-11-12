@@ -3,12 +3,11 @@
   import { fade } from "svelte/transition";
 
   import ContentLightbox from "./ContentLightbox.js";
-  function showLightbox(item) {
-    ContentLightbox.createLightbox({ data: item.content || `<img src="${item.src}" />` });
-  }
 
-  export let items = [];
-  export let rotation = 0;
+  export let items = {
+    title: "",
+    content: []
+  };
 </script>
 
 <style>
@@ -21,6 +20,8 @@
     height: 100vh;
     overflow-y: scroll;
     padding: 15px;
+
+    cursor: pointer;
 
     -webkit-box-shadow: 1px 3px 22px 0px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 1px 3px 22px 0px rgba(0, 0, 0, 0.3);
@@ -41,14 +42,14 @@
   }
 </style>
 
-<div
-  class="filmstrip"
-  transition:fade={{ delay: 1000, duration: 800 }}
-  style={`transform: rotate(${rotation}deg); margin-right: ${200 * Math.abs(Math.sin(Math.abs(rotation)))}px`}>
-  {#each items as item}
+<div class="filmstrip" transition:fade={{ delay: 1000, duration: 800 }}>
+  <Tile>
+    <b>{items.title}</b>
+  </Tile>
+  {#each items.content as item}
     <div class="spacer">
-      <Tile on:click={() => showLightbox(item)} src={item.src}>
-        {item.content || ""}
+      <Tile on:click={() => ContentLightbox.createLightbox(item)}>
+        {item.title || item.content || "???"}
       </Tile>
     </div>
   {/each}

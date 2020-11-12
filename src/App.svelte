@@ -1,11 +1,6 @@
 <script>
   import Filmstrip from "./Filmstrip.svelte";
-  import data from "./data.json";
-
-  function rand() {
-    let maxAngle = 15;
-    return Math.random() * maxAngle - maxAngle/2;
-  }
+  import diaryData from "./diaryData.js";
 </script>
 
 <style>
@@ -15,6 +10,8 @@
 
     flex-basis: 200px;
     display: flex;
+
+    justify-content: center;
   }
 
   :global(.overflowContainer > *) {
@@ -23,7 +20,7 @@
 </style>
 
 <div class="overflowContainer">
-  {#each data as items}
-    <Filmstrip {items} rotation={rand()} />
+  {#each diaryData as data}
+    <Filmstrip items={data} />
   {/each}
 </div>

@@ -36,16 +36,16 @@
 
   .content {
     background-color: white;
-    width: 90%;
-    height: 90%;
+    width: 60%;
+    height: 60%;
 
     border-radius: 3px;
 
     text-align: center;
-    /* display: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column; */
+    flex-direction: column;
   }
 
   :global(.content > *) {
@@ -57,6 +57,7 @@
 <div class="lightbox" transition:fade={{ duration: 300 }}>
   <div class="background" on:click={close} />
   <div class="content">
-    {@html data}
+    <h1>{data.title}</h1>
+    <p>{data.content}</p>
   </div>
 </div>

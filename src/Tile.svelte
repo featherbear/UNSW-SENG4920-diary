@@ -6,8 +6,8 @@
   .tile {
     display: flex;
     align-items: center;
+    justify-content: center;
     text-align: center;
-    cursor: pointer;
     min-height: 80px;
   }
 </style>

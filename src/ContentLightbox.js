@@ -5,7 +5,9 @@ function createLightbox (props) {
 
   const lightbox = new ContentLightbox({
     target: document.body,
-    props,
+    props: {
+      data: props
+    },
     intro: true
   })
 
