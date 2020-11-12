@@ -12,7 +12,6 @@
 
 <style>
   .filmstrip {
-    margin-right: 30px;
     margin-bottom: 30px;
 
     width: 200px;
@@ -26,6 +25,10 @@
     -webkit-box-shadow: 1px 3px 22px 0px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 1px 3px 22px 0px rgba(0, 0, 0, 0.3);
     box-shadow: 1px 3px 22px 0px rgba(0, 0, 0, 0.3);
+  }
+
+  .filmstrip:not(:last-child) {
+    margin-right: 30px;
   }
 
   .spacer:not(:first-child) {
