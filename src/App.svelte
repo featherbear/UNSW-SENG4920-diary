@@ -20,7 +20,7 @@
 </style>
 
 <div class="overflowContainer">
-  {#each diaryData as data}
+  {#each diaryData.filter(d=>d.content.length) as data}
     <Filmstrip items={data} />
   {/each}
 </div>
