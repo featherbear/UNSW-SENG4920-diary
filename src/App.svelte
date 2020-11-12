@@ -14,7 +14,6 @@
 
   .overflowContainer {
     flex: 1;
-    height: 100%;
     position: relative;
 
     flex-basis: 200px;
@@ -33,8 +32,9 @@
     
     z-index: 99;
     
+    position: sticky;
     top: 0;
-    height: 100px;
+    height: var(--titleHeight);
 
     display: flex;
     justify-content: center;

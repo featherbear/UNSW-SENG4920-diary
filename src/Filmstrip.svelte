@@ -13,7 +13,7 @@
 <style>
   .filmstrip {
     width: 200px;
-    max-height: 100%;
+    max-height: 800px;
 
     background-color: var(--stripColour);
     
@@ -21,7 +21,7 @@
     margin: 0 calc(var(--bMargin) / 2) var(--bMargin) calc(var(--bMargin) / 2);
     
     border-radius: 5px;
-    overflow-y: scroll;
+    overflow-y: auto;
     cursor: pointer;
 
     -webkit-box-shadow: 1px 3px 22px 0px rgba(0, 0, 0, 0.3);
@@ -29,19 +29,27 @@
     box-shadow: 1px 3px 22px 0px rgba(0, 0, 0, 0.3);
   }
 
-  .spacer:not(:first-child) {
-    margin-top: 15px;
-  }
-
   .spacer {
     transform: scale(0.98);
     transition: transform 0.2s;
+    margin-bottom: 15px;
   }
 
   .spacer:hover {
     transform: scale(1);
   }
 
+  .title {
+    z-index: 1;
+    text-align: center;
+    position: sticky;
+    background-color: var(--stripColour);
+    top: -15px;
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-bottom: 30px;
+  }
+  
   .subtitle {
     font-style: italic;
     color: grey;
@@ -49,9 +57,9 @@
 </style>
 
 <div class="filmstrip" transition:fade={{ delay: 1000, duration: 800 }}>
-  <Tile>
+  <div class="title">
     <h2>{items.title}</h2>
-  </Tile>
+  </div>
   {#if items.content}
     {#each items.content as item}
       <div class="spacer">
