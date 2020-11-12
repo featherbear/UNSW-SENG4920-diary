@@ -12,13 +12,12 @@
 
 <style>
   .filmstrip {
-    margin-bottom: 30px;
-
     width: 200px;
     background-color: var(--stripColour);
-    height: 100vh;
+    max-height: 100%;
     overflow-y: scroll;
     padding: 15px;
+    border-radius: 5px;
 
     cursor: pointer;
 
@@ -52,7 +51,7 @@
 
 <div class="filmstrip" transition:fade={{ delay: 1000, duration: 800 }}>
   <Tile>
-    <b>{items.title}</b>
+    <h2>{items.title}</h2>
   </Tile>
   {#if items.content}
     {#each items.content as item}

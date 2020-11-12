@@ -1,5 +1,7 @@
 :root {
   --stripColour: rgb(241, 240, 232);
+  --colorA: #4dc088;
+  --colorB: #699fd5;
 }
 
 html,
@@ -93,7 +95,7 @@ button:focus {
   left: calc(-1 * var(--borderWidth));
   height: calc(100% + var(--borderWidth) * 2);
   width: calc(100% + var(--borderWidth) * 2);
-  background: linear-gradient(146deg, #4dc088, #699fd5);
+  background: linear-gradient(146deg, var(--colorA), var(--colorB));
   border-radius: calc(2 * var(--borderWidth));
   z-index: -1;
   animation: gradientBorderAnim 3s ease alternate infinite;
@@ -110,4 +112,53 @@ button:focus {
 	100% {
 		background-position: 0% 50%;
 	}
+}
+
+.gradientAnim {
+  /* z-index: 0;
+  pointer-events: none;
+  mix-blend-mode: hue;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; */
+  background: radial-gradient(var(--colorA), var(--colorB));
+  background-size: 1000% 1000%;
+  -webkit-animation: GradientAnim 20s ease infinite;
+  -moz-animation: GradientAnim 20s ease infinite;
+  animation: GradientAnim 20s ease infinite;
+}
+@-webkit-keyframes GradientAnim {
+  0% {
+    background-position: 0% 46%;
+  }
+  50% {
+    background-position: 100% 55%;
+  }
+  100% {
+    background-position: 0% 46%;
+  }
+}
+@-moz-keyframes GradientAnim {
+  0% {
+    background-position: 0% 46%;
+  }
+  50% {
+    background-position: 100% 55%;
+  }
+  100% {
+    background-position: 0% 46%;
+  }
+}
+@keyframes GradientAnim {
+  0% {
+    background-position: 0% 46%;
+  }
+  50% {
+    background-position: 100% 55%;
+  }
+  100% {
+    background-position: 0% 46%;
+  }
 }
