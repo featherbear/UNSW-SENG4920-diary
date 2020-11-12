@@ -17,7 +17,7 @@
     margin-bottom: 30px;
 
     width: 200px;
-    background-color: rgb(241, 240, 232);
+    background-color: var(--stripColour);
     height: 100vh;
     overflow-y: scroll;
     padding: 15px;
@@ -30,6 +30,15 @@
   .spacer:not(:first-child) {
     margin-top: 15px;
   }
+
+  .spacer {
+    transform: scale(0.98);
+    transition: transform 0.2s;
+  }
+
+  .spacer:hover {
+    transform: scale(1);
+  }
 </style>
 
 <div
@@ -38,7 +47,9 @@
   style={`transform: rotate(${rotation}deg); margin-right: ${200 * Math.abs(Math.sin(Math.abs(rotation)))}px`}>
   {#each items as item}
     <div class="spacer">
-      <Tile on:click={() => showLightbox(item)} src={item.src} />
+      <Tile on:click={() => showLightbox(item)} src={item.src}>
+        {item.content || ""}
+      </Tile>
     </div>
   {/each}
 </div>

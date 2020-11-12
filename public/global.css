@@ -1,3 +1,7 @@
+:root {
+  --stripColour: rgb(241, 240, 232);
+}
+
 html,
 body {
   position: relative;
@@ -74,4 +78,36 @@ button:active {
 
 button:focus {
   border-color: #666;
+}
+
+.gradientBorder {
+  --borderWidth: 3px;
+  position: relative;
+  background: var(--stripColour);
+  border-radius: var(--borderWidth);
+}
+.gradientBorder:after {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(146deg, #4dc088, #699fd5);
+  border-radius: calc(2 * var(--borderWidth));
+  z-index: -1;
+  animation: gradientBorderAnim 3s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+@keyframes gradientBorderAnim {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
