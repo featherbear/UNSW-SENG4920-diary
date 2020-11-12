@@ -2,6 +2,8 @@
   --stripColour: rgb(241, 240, 232);
   --colorA: #4dc088;
   --colorB: #699fd5;
+  --titleHeight: 100px;
+  --bMargin: 15px;
 }
 
 html,
