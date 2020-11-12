@@ -12,6 +12,15 @@ export default [
         link: 'https://github.com/featherbear/sandbox-spotify-test-api-auth'
       },
       {
+        title: 'Tuesday (Meeting)',
+        date: '29/09/2020',
+        content: [
+          'Confirm project name - <b>Splitify</b>',
+          'Discussed epics and features, creating them in Pivotal Tracker',
+          'Assigned roles and tasks to the stories'
+        ]
+      },
+      {
         title: 'Wednesday',
         date: '30/09/2020',
         content: 'Created logos and branding resource',
@@ -20,6 +29,15 @@ export default [
           url: 'https://splitify.github.io/branding/',
           title: 'Splitify Branding'
         }
+      },
+      {
+        title: 'Thursday (Meeting)',
+        date: '1/10/2020',
+        content: [
+          'Looked at similar and competing products (Organize Your Music, Remixr, Dubolt)',
+          'Select technologies to use in the application - React w/ TypeScript, Server-less backend, Single Page Application',
+          'Decided criteria for Beta and Release MVPs'
+        ]
       },
       {
         title: 'Friday',
@@ -35,7 +53,16 @@ export default [
   },
   {
     title: 'Week 4',
-    content: []
+    content: [
+      {
+        title: 'Friday (Meeting)',
+        date: '9/10/2020',
+        content: [
+          '- No work was done on the project this week as everyone was busy -',
+          "Team brainstormed, discussed and developed mockups of the application's interface and functionality"
+        ]
+      }
+    ]
   },
   {
     title: 'Week 5',
@@ -46,6 +73,13 @@ export default [
         content: [
           'Add storage provider to allow storing of application data locally within the browser (for data caching)',
           'Create authentication model for interacting with the Spotify API'
+        ]
+      },
+      {
+        title: 'Friday (Meeting)',
+        date: '16/10/2020',
+        content: [
+          'Team discussed application data structure, as well as what data will be requested from the Spotify API'
         ]
       }
     ]
@@ -95,6 +129,14 @@ export default [
           'Implement the creation of unique stub subplaylists',
           'Rewrite the `expand` method of incomplete data objects to return the same promise, so that all callers can await the promise'
         ]
+      },
+      {
+        title: 'Friday (Meeting)',
+        date: '23/10/2020',
+        content: [
+          'Outstanding UI and UX design questions were discussed and resolved',
+          'Discussed problem about the Spotify API returning a paginated list of results rather than all results at once'
+        ]
       }
     ]
   },
@@ -113,6 +155,13 @@ export default [
         title: 'Friday',
         date: '30/10/2020',
         content: ['Code cleanup and type hinting optimisations']
+      },
+      {
+        title: 'Friday (Meeting)',
+        date: '30/10/2020',
+        content: [
+          'Discussed the need for correctly representing audio feature values (i.e. loudness should be in decibels rather than a percentage'
+        ]
       },
       {
         title: 'Saturday',
@@ -148,6 +197,16 @@ export default [
         content: [
           'Implement movement of tracks between sub-playlists',
           'Create track group stubs, and a wrapper for tracks so that custom metadata can be attached for each track'
+        ]
+      },
+
+      {
+        title: 'Friday (Meeting)',
+        date: '6/11/2020',
+        content: [
+          'Concern raised about the lack of genre information in each track, as Spotify (falsely) claims to include genre data in each track. Rather it only includes this data in the artist data',
+          'Team decided to retrieve genre data from the <a href="https://www.last.fm/api">Last.fm API</a>',
+          'Audience suggested the ability to select multiple playlists at the same time as a source pool'
         ]
       }
     ]
