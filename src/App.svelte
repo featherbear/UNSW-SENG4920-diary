@@ -1,9 +1,5 @@
 <script>
   import Filmstrip from "./Filmstrip.svelte";
-  import Loader from "./Loader.svelte";
-
-  let showIntro = true;
-
   import data from "./data.json";
 
   function rand() {
@@ -26,12 +22,8 @@
   }
 </style>
 
-{#if showIntro}
-  <Loader on:destroy={() => (showIntro = false)} />
-{:else}
-  <div class="overflowContainer">
-    {#each data as items}
-      <Filmstrip {items} rotation={rand()} />
-    {/each}
-  </div>
-{/if}
+<div class="overflowContainer">
+  {#each data as items}
+    <Filmstrip {items} rotation={rand()} />
+  {/each}
+</div>
