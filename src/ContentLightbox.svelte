@@ -61,6 +61,12 @@
     flex-direction: column;
   }
 
+  @media (orientation: portrait) {
+   .content {
+     width: 95%;
+    }
+  }
+
   :global(.content > *) {
     width: 80%;
     max-height: 100%;
