@@ -43,6 +43,11 @@
   .spacer:hover {
     transform: scale(1);
   }
+
+  .subtitle {
+    font-style: italic;
+    color: grey;
+  }
 </style>
 
 <div class="filmstrip" transition:fade={{ delay: 1000, duration: 800 }}>
@@ -51,8 +56,13 @@
   </Tile>
   {#each items.content as item}
     <div class="spacer">
-      <Tile on:click={() => ContentLightbox.createLightbox(item)}>
-        {item.title || item.content || "???"}
+      <Tile on:click={() => ContentLightbox.createLightbox({...item, title: [items.title, item.title, item.date].filter(v=>v).join(" - ")})}>
+        {#if item.title}
+          {item.title}
+        {/if}
+        {#if item.date}
+          <div class="subtitle">{item.date}</div>
+        {/if}
       </Tile>
     </div>
   {/each}

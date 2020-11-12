@@ -60,7 +60,7 @@
   <div class="background" on:click={close} />
   <div class="content">
     <h1>{data.title}</h1>
-    <p>{data.content}</p>
+    <p>{@html data.content}</p>
     {#if data.frame}
       <IFrame url={data.frame.url} title={data.frame.title} />
     {/if}
