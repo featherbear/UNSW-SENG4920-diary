@@ -8,7 +8,7 @@
   }
 
   .site-thumbnail {
-    width: 320px !important;
+    /* width: 320px !important; */
     height: 180px !important;
     position: relative;
     border-radius: 8px;

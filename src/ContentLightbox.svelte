@@ -54,7 +54,7 @@
     border-radius: 3px;
     user-select: text;
 
-    text-align: center;
+    /* text-align: center; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -62,7 +62,7 @@
   }
 
   :global(.content > *) {
-    width: 100%;
+    width: 80%;
     max-height: 100%;
   }
 
