@@ -262,7 +262,7 @@ export default [
         title: 'Friday',
         date: '13/11/2020',
         content: [
-          'Removed hardcoded adjacent component heights, and implement height calculation that respects adjacent components'
+          'Removed hardcoded adjacent component heights, and implement height calculation that respects adjacent components',
           'Moved playlist sort button into the actions bar'
         ]
       }
