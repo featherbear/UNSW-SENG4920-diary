@@ -43,6 +43,7 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.4);
     z-index: -1;
+    cursor: pointer;
   }
 
   .content {
@@ -51,6 +52,7 @@
     height: 60%;
 
     border-radius: 3px;
+    user-select: text;
 
     text-align: center;
     display: flex;
@@ -62,6 +64,10 @@
   :global(.content > *) {
     width: 100%;
     max-height: 100%;
+  }
+
+  .lightbox :global(pre) {
+    display: inline;
   }
 </style>
 

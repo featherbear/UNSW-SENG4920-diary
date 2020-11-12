@@ -54,16 +54,18 @@
   <Tile>
     <b>{items.title}</b>
   </Tile>
-  {#each items.content as item}
-    <div class="spacer">
-      <Tile on:click={() => ContentLightbox.createLightbox({...item, title: [items.title, item.title, item.date].filter(v=>v).join(" - ")})}>
-        {#if item.title}
-          {item.title}
-        {/if}
-        {#if item.date}
-          <div class="subtitle">{item.date}</div>
-        {/if}
-      </Tile>
-    </div>
-  {/each}
+  {#if items.content}
+    {#each items.content as item}
+      <div class="spacer">
+        <Tile on:click={() => ContentLightbox.createLightbox({...item, title: [items.title, item.title, item.date].filter(v=>v).join(" - ")})}>
+          {#if item.title}
+            {item.title}
+          {/if}
+          {#if item.date}
+            <div class="subtitle">{item.date}</div>
+          {/if}
+        </Tile>
+      </div>
+    {/each}
+  {/if}
 </div>
