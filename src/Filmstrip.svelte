@@ -13,7 +13,7 @@
 <style>
   .filmstrip {
     width: 200px;
-    max-height: 800px;
+    max-height: calc(100vh - var(--titleHeight) - 90px);
 
     background-color: var(--stripColour);
     
