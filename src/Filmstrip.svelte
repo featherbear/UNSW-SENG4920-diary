@@ -20,6 +20,7 @@
     padding: 15px;
     margin: 0 calc(var(--bMargin) / 2) var(--bMargin) calc(var(--bMargin) / 2);
     
+    z-index: 0;
     border-radius: 5px;
     overflow-y: auto;
     cursor: pointer;
