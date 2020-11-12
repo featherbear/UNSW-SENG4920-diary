@@ -59,8 +59,20 @@
 <div class="lightbox" transition:fade={{ duration: 300 }}>
   <div class="background" on:click={close} />
   <div class="content">
-    <h1>{data.title}</h1>
-    <p>{@html data.content}</p>
+    {#if data.title}
+      <h1>{data.title}</h1>
+    {/if}
+    {#if data.content}
+      {#if Array.isArray(data.content)}
+        <ul>
+          {#each data.content as entry}
+            <li>{@html entry}</li>
+          {/each}
+        </ul>
+      {:else}
+        <p>{@html data.content}</p>
+      {/if}
+    {/if}
     {#if data.link}
       <p>Link: <a href={data.link}>{data.link.replace(/^https?:\/\//i, '')}</a></p>
     {/if}
