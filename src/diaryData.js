@@ -58,7 +58,7 @@ export default [
         title: 'Friday (Meeting)',
         date: '9/10/2020',
         content: [
-          '- No work was done on the project this week as everyone was busy -',
+          '<i>I was not able to work on the project this week due to other commitments</i>',
           "Team brainstormed, discussed and developed mockups of the application's interface and functionality"
         ]
       }
@@ -71,6 +71,7 @@ export default [
         title: 'Friday',
         date: '16/10/2020',
         content: [
+          '<i>I was not able to work on the project until late this week due to other commitments</i>',
           'Add storage provider to allow storing of application data locally within the browser (for data caching)',
           'Create authentication model for interacting with the Spotify API'
         ]
@@ -96,7 +97,9 @@ export default [
         title: 'Monday',
         date: '19/10/2020',
         content: [
-          'Create playlist selector component that lets the user select the desired playlist to split'
+          'Create playlist selector component that lets the user select the desired playlist to split',
+          'Improve application performance by making the authentication validation process execute only once per page load',
+          'Note: The Spotify API returns paginated responses'
         ]
       },
       {
@@ -134,8 +137,15 @@ export default [
         title: 'Friday (Meeting)',
         date: '23/10/2020',
         content: [
-          'Outstanding UI and UX design questions were discussed and resolved',
-          'Discussed problem about the Spotify API returning a paginated list of results rather than all results at once'
+          'Outstanding UI and UX design questions were discussed and resolved'
+        ]
+      },
+      {
+        title: 'Saturday',
+        date: '24/10/2020',
+        content: [
+          'Modify Subplaylist to take in actual playlist data (passed in from the Dashboard)',
+          'Improve efficiency of genre-based track selection'
         ]
       }
     ]
@@ -177,10 +187,19 @@ export default [
     title: 'Week 8',
     content: [
       {
+        title: 'Sunday',
+        date: '1/11/2020',
+        content: [
+          'Add drag icon hint to track entries',
+          'Change track sorting component into a button'
+        ]
+      },
+      {
         title: 'Monday',
         date: '2/11/2020',
         content: [
-          'Change Table format of the track listing into a List format, as it was more suitable'
+          'Change Table format of the track listing into a List format, as it was more suitable',
+          'Refactor Genre Selector and Feature Filter'
         ]
       },
       {
@@ -196,7 +215,7 @@ export default [
         date: '6/11/2020',
         content: [
           'Implement movement of tracks between sub-playlists',
-          'Create track group stubs, and a wrapper for tracks so that custom metadata can be attached for each track'
+          'Create track group stubs, and a wrapper for tracks so that custom metadata can be attached for each track - required to allow proper marking of custom tracks, as well as functional inter-playlist track movement'
         ]
       },
 
@@ -219,21 +238,28 @@ export default [
         date: '11/11/2020',
         content: [
           'UI tweaks',
-          'Performance optimisations of track preview and track filters',
           'Implement copying (by drag) of tracks from the master playlist',
+          'Implemented playlist action panel to contain playlist functions',
+          'Assigned a UUID to each track entry',
           'Fix genre and feature selection behaviour with custom tracks',
           'Fix bug which would cause playlist loading to fail if a "local" track was in the playlist',
           'Adjust playlist height to fit the screen',
-          'Implemented playlist action panel to contain playlist functions'
+          'Performance optimisations of track preview and track filters'
+        ]
+      },
+      {
+        title: 'Thursday',
+        date: '12/11/2020',
+        content: [
+          'Implemented dynamic playlist height calculation, reflective on window resize'
         ]
       },
       {
         title: 'Friday',
         date: '13/11/2020',
         content: [
-          'Implement dynamic playlist height calculation, reflective on window resize',
-          'Remove hardcoded adjacent component heights, and implement height calculation that respects adjacent components',
-          'Move playlist actions into the actions bar'
+          'Removed hardcoded adjacent component heights, and implement height calculation that respects adjacent components'
+          // 'Move playlist actions into the actions bar'
         ]
       }
     ]
