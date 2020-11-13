@@ -1,7 +1,8 @@
 <script>
   import Filmstrip from "./Filmstrip.svelte";
   import diaryData from "./diaryData.js";
-  import FileIcon from './file-alt-regular.svg'
+  import FileIcon from './icons/file-alt-regular.svg'
+  import ColumnsIcon from './icons/columns-solid.svg'
 
   import Content from './LightboxContent.svelte'
 
@@ -101,7 +102,7 @@
     transition: opacity 0.3s;
   }
 
-  .titleBlock .modeToggle:hover, .titleBlock .modeToggle.isBoring {
+  .titleBlock .modeToggle:hover {
     opacity: 1;
   }
 </style>
@@ -110,7 +111,9 @@
   <div class="titleBlock gradientAnim">
     <img alt="logo" src="https://splitify.github.io/branding/textmark/textmark@72.png"/> 
     <p>Project Diary - Andrew Wong (z5206677)</p>
-    <div class="modeToggle {boring && 'isBoring'}" on:click={() => boring = !boring}><FileIcon /></div>
+    <div class="modeToggle" on:click={() => boring = !boring}>
+      <svelte:component this={boring ? FileIcon : ColumnsIcon} />
+    </div>
   </div>
   {#if boring}
     <div class="boringContainer">

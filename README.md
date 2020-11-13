@@ -11,3 +11,7 @@
 * [Splitify Web App](https://splitify.github.io)
 * [Splitify Source Code](https://github.com/Splitify/splitify)
 * [Team Splitify](https://github.com/splitify/)
+
+----
+
+Uses icons from [Font Awesome](https://fontawesome.com/license)
