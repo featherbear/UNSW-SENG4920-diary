@@ -1,5 +1,5 @@
 <script>
-  import IFrame from "./PreviewIFrame.svelte"
+  import Content from './LightboxContent.svelte'
 
   import { createEventDispatcher } from "svelte";
   const dispatch = createEventDispatcher();
@@ -10,16 +10,7 @@
 
   import { fade } from "svelte/transition";
 
-  let commitID = ""
-  let link = "";
   export let data;
-  $: {
-    link = (data.link || "").replace(/^https?:\/\//i, '')
-    let regex = /^github.com\/.+?\/blob\/(.+?)\//i.exec(link)
-    if (regex) {
-      commitID = regex[1].slice(0, 8)
-    }
-  }
 </script>
 
 <style>
@@ -80,29 +71,6 @@
 <div class="lightbox" transition:fade={{ duration: 300 }}>
   <div class="background" on:click={close} />
   <div class="content">
-    {#if data.title}
-      <h1>{data.title}</h1>
-    {/if}
-    {#if data.content}
-      {#if Array.isArray(data.content)}
-        <ul>
-          {#each data.content as entry}
-            <li>{@html entry}</li>
-          {/each}
-        </ul>
-      {:else}
-        <p>{@html data.content}</p>
-      {/if}
-    {/if}
-    {#if data.link}
-        {#if commitID}
-          <p>Commit: <a href={data.link}>{commitID}</a></p>
-        {:else}
-          <p>Link: <a href={data.link}>{link}</a></p>
-        {/if}
-    {/if}
-    {#if data.frame}
-      <IFrame url={data.frame.url} title={data.frame.title} />
-    {/if}
+    <Content data={data}/>
   </div>
 </div>

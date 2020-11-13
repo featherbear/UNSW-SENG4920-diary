@@ -2,7 +2,7 @@
   import Tile from "./Tile.svelte";
   import { fade } from "svelte/transition";
 
-  import ContentLightbox from "./ContentLightbox.js";
+  import ContentLightbox from "./Lightbox.js";
 
   export let items = {
     title: "",

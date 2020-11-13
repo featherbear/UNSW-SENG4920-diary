@@ -1,4 +1,4 @@
-import ContentLightbox from './ContentLightbox.svelte';
+import ContentLightbox from './Lightbox.svelte';
 
 function createLightbox (props) {
   // if (typeof props === 'string') props = { title: props }
