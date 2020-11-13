@@ -6,7 +6,7 @@ export default [
         title: 'Tuesday',
         date: '29/09/2020',
         content: [
-          'Create GitHub organisation and project repository with CRA w/ Typescript',
+          'Create GitHub organisation and project repository with Create React App w/ Typescript',
           'Experimented with acquiring an access token from the Spotify API'
         ],
         link: 'https://github.com/featherbear/sandbox-spotify-test-api-auth'
@@ -15,15 +15,19 @@ export default [
         title: 'Tuesday (Meeting)',
         date: '29/09/2020',
         content: [
-          'Confirm project name - <b>Splitify</b>',
-          'Discussed epics and features, creating them in Pivotal Tracker',
+          'Confirmed project name - <b>Splitify</b>',
+          'Discussed required epics and features and created stories in Pivotal Tracker',
           'Assigned roles and tasks to the stories'
         ]
       },
       {
         title: 'Wednesday',
         date: '30/09/2020',
-        content: 'Created logos and branding resource',
+        content: [
+          'Created branding resource for the project, such as logos and textmarks.',
+          'Created automated multi-resolution image building toolchain',
+          'Created branding webpage to display the resource'
+        ],
         link: 'https://github.com/Splitify/branding',
         frame: {
           url: 'https://splitify.github.io/branding/',
@@ -42,7 +46,7 @@ export default [
       {
         title: 'Friday',
         date: '2/10/2020',
-        content: 'Created project pitch presentation',
+        content: 'Team decided against making a presentation for the initial project pitch, but I made one anyway',
         link: 'https://github.com/Splitify/initial-project-pitch',
         frame: {
           url: 'https://splitify.github.io/initial-project-pitch/',
