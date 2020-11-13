@@ -41,6 +41,7 @@
     display: flex;
     flex-direction: column;
     user-select: text;
+    overflow-x: hidden;
   }
 
   .overflowContainer {
