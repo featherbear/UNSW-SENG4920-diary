@@ -48,6 +48,7 @@
   }
 
   .titleBlock img {
+    height: calc(var(--titleHeight) - 30px);
     pointer-events: none;
     filter: contrast(0) brightness(0.2);
   }
