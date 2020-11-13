@@ -46,7 +46,8 @@ export default [
       {
         title: 'Friday',
         date: '2/10/2020',
-        content: 'Team decided against making a presentation for the initial project pitch, but I made one anyway',
+        content:
+          'Team decided against making a presentation for the initial project pitch, but I made one anyway',
         link: 'https://github.com/Splitify/initial-project-pitch',
         frame: {
           url: 'https://splitify.github.io/initial-project-pitch/',
@@ -211,6 +212,13 @@ export default [
         ]
       },
       {
+        title: 'Wednesday',
+        date: '4/11/2020',
+        content: [
+          'Helped to fix Last.fm genre integration with the Accumulumatorinator'
+        ]
+      },
+      {
         title: 'Thursday',
         date: '5/11/2020',
         content: [
@@ -232,7 +240,7 @@ export default [
         date: '6/11/2020',
         content: [
           'Concern raised about the lack of genre information in each track, as Spotify (falsely) claims to include genre data in each track. Rather it only includes this data in the artist data',
-          'Team decided to retrieve genre data from the <a href="https://www.last.fm/api">Last.fm API</a>',
+          'Review genre data from the <a href="https://www.last.fm/api">Last.fm API</a>',
           'Stakeholders suggested the ability to select multiple playlists at the same time as a source pool'
         ]
       }
@@ -242,11 +250,18 @@ export default [
     title: 'Week 9',
     content: [
       {
+        title: 'Tuesday',
+        date: '10/11/2020',
+        content: [
+          'Implement copying (by drag) of tracks from the master playlist',
+          'Extended playlist structure to contain a track source pool <i>(See 6/11/2020)</i>'
+        ]
+      },
+      {
         title: 'Wednesday',
         date: '11/11/2020',
         content: [
           'UI tweaks',
-          'Implement copying (by drag) of tracks from the master playlist',
           'Implemented playlist action panel to contain playlist functions',
           'Assigned a UUID to each track entry',
           'Fix genre and feature selection behaviour with custom tracks',
@@ -259,7 +274,8 @@ export default [
         title: 'Thursday',
         date: '12/11/2020',
         content: [
-          'Implemented dynamic playlist height calculation, reflective on window resize'
+          'Implemented dynamic playlist height calculation, reflective on window resize',
+          "Fix unresponsive genre suggestion (update event didn't bubble)"
         ]
       },
       {
