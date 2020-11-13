@@ -62,10 +62,6 @@
     width: 80%;
     max-height: 100%;
   }
-
-  .lightbox :global(pre) {
-    display: inline;
-  }
 </style>
 
 <div class="lightbox" transition:fade={{ duration: 300 }}>

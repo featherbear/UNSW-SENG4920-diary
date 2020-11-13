@@ -24,7 +24,7 @@ export default [
         title: 'Wednesday',
         date: '30/09/2020',
         content: [
-          'Created branding resource for the project, such as logos and textmarks.',
+          'Created branding resources for the project, such as logos and textmarks.',
           'Created automated multi-resolution image building toolchain',
           'Created branding webpage to display the resource'
         ],
@@ -134,7 +134,7 @@ export default [
           'Modify parsers to use the Caching Accumulumatorinator',
           'Optimise Spotify API request to fetch only track IDs',
           'Update Spotify API scopes to view private playlists',
-          'Implement the creation of unique stub subplaylists',
+          'Implement the creation of unique stub sub-playlists',
           'Rewrite the `expand` method of incomplete data objects to return the same promise, so that all callers can await the promise'
         ]
       },
@@ -150,7 +150,7 @@ export default [
         title: 'Saturday',
         date: '24/10/2020',
         content: [
-          'Modify Subplaylist to take in actual playlist data (passed in from the Dashboard)',
+          'Modify Subplaylist.tsx to take in actual playlist data (passed in from the Dashboard)',
           'Improve efficiency of genre-based track selection'
         ]
       }
@@ -163,7 +163,7 @@ export default [
         title: 'Thursday',
         date: '29/10/2020',
         content: [
-          'Implement track reordering with <a href="https://react-beautiful-dnd.netlify.app/"><pre>react-beautiful-dnd</pre></a>',
+          'Implement track reordering with <a href="https://react-beautiful-dnd.netlify.app/"><code>react-beautiful-dnd</code></a>',
           'Auto-load playlists when the playlist selector is opened',
           'Experienced difficulties with UI element alignment as a result of the Table component layout'
         ]
@@ -282,7 +282,7 @@ export default [
         title: 'Friday',
         date: '13/11/2020',
         content: [
-          'Removed hardcoded adjacent component heights, and implement height calculation that respects adjacent components',
+          'Removed hard-coded adjacent component heights, and implement height calculation that respects adjacent components',
           'Moved playlist sort button into the actions bar'
         ]
       }

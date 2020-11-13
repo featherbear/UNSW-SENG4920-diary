@@ -19,13 +19,13 @@
 {/if}
 {#if data.content}
   {#if Array.isArray(data.content)}
-  <ul>
-      {#each data.content as entry}
-      <li>{@html entry}</li>
-      {/each}
-  </ul>
+    <ul>
+        {#each data.content as entry}
+          <li>{@html entry}</li>
+        {/each}
+    </ul>
   {:else}
-  <p>{@html data.content}</p>
+    <p>{@html data.content}</p>
   {/if}
 {/if}
 {#if data.link}
@@ -36,5 +36,5 @@
   {/if}
 {/if}
 {#if data.frame}
-<IFrame url={data.frame.url} title={data.frame.title} />
+  <IFrame url={data.frame.url} title={data.frame.title} />
 {/if}
