@@ -283,7 +283,9 @@ export default [
         date: '13/11/2020',
         content: [
           'Removed hard-coded adjacent component heights, and implement height calculation that respects adjacent components',
-          'Moved playlist sort button into the actions bar'
+          'Moved playlist sort button into the actions bar',
+          'Added mobile crash-page to encourage users to use a desktop / larger screen',
+          'Clean up UI'
         ]
       }
     ]
