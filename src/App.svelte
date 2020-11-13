@@ -7,6 +7,11 @@
   import Content from './LightboxContent.svelte'
 
   let boring = false;
+
+  if (location.hash === '#boring') {
+    boring = true;
+    location.hash = ""
+  }
 </script>
 
 <style>
