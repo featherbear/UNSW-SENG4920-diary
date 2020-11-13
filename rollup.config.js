@@ -4,6 +4,7 @@ import commonjs from 'rollup-plugin-commonjs';
 import json from 'rollup-plugin-json';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
+import svelteSVG from "rollup-plugin-svelte-svg";
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -37,6 +38,7 @@ export default {
 		}),
 		commonjs(),
 		json(),
+		svelteSVG(),
 
 		// Watch the `public` directory and refresh the
 		// browser on changes when not in production

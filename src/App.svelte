@@ -1,6 +1,11 @@
 <script>
   import Filmstrip from "./Filmstrip.svelte";
   import diaryData from "./diaryData.js";
+  import FileIcon from './file-alt-regular.svg'
+
+  import Content from './LightboxContent.svelte'
+
+  let boring = false;
 </script>
 
 <style>
@@ -10,6 +15,25 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+  }
+
+  .boringContainer {
+    display: flex;
+    flex-direction: column;
+    max-width: 1280px;
+    margin: 0 auto;
+    user-select: text;
+  }
+
+  .boringContainer:before {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    content: '';
+    background-color: rgba(255, 255, 255, 0.4);
+    z-index: -1;
   }
 
   .overflowContainer {
@@ -56,16 +80,43 @@
   .titleBlock p {
     margin: 4px;
   }
+
+  .titleBlock .modeToggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+
+    opacity: 0.6;
+    transition: opacity 0.3s;
+  }
+
+  .titleBlock .modeToggle:hover, .titleBlock .modeToggle.isBoring {
+    opacity: 1;
+  }
 </style>
 
 <div class="container">
   <div class="titleBlock gradientAnim">
     <img alt="logo" src="https://splitify.github.io/branding/textmark/textmark@72.png"/> 
     <p>Project Diary - Andrew Wong (z5206677)</p>
+    <div class="modeToggle {boring && 'isBoring'}" on:click={() => boring = !boring}><FileIcon /></div>
   </div>
-  <div class="overflowContainer">
-    {#each diaryData.filter(d=>d.content && d.content.length) as data}
-      <Filmstrip items={data} />
-    {/each}
-  </div>
+  {#if boring}
+    <div class="boringContainer">
+      {#each diaryData.filter(d=>d.content && d.content.length).map(d => d.content.map(c => ({
+        ...c, title: [d.title, c.title, c.date].filter(v=>v).join(" - ")
+      }))).flat() as content}
+        <Content data={content} />
+      {/each}
+    </div>
+  {:else}  
+    <div class="overflowContainer">
+      {#each diaryData.filter(d=>d.content && d.content.length) as data}
+        <Filmstrip items={data} />
+      {/each}
+    </div>
+  {/if}
 </div>

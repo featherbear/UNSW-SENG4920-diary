@@ -57,7 +57,7 @@
   }
 </style>
 
-<div class="filmstrip" transition:fade={{ delay: 1000, duration: 800 }}>
+<div class="filmstrip">
   <div class="title">
     <h2>{items.title}</h2>
   </div>
