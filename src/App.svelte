@@ -18,13 +18,12 @@
   }
 
   .boringContainer {
+    padding: 0px 15px var(--bMargin) 15px;
     display: flex;
     flex-direction: column;
-    max-width: 1280px;
-    margin: 0 auto;
-    padding-bottom: var(--bMargin);
-    user-select: text;
+    align-items: center;
   }
+
 
   .boringContainer:before {
     position: fixed;
@@ -32,9 +31,16 @@
     left: 0;
     bottom: 0;
     right: 0;
-    content: '';
     background-color: rgba(255, 255, 255, 0.4);
+    content: '';
     z-index: -1;
+  }
+
+  .boring {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    user-select: text;
   }
 
   .overflowContainer {
@@ -107,11 +113,13 @@
   </div>
   {#if boring}
     <div class="boringContainer">
-      {#each diaryData.filter(d=>d.content && d.content.length).map(d => d.content.map(c => ({
-        ...c, title: [d.title, c.title, c.date].filter(v=>v).join(" - ")
-      }))).flat() as content}
-        <Content data={content} />
-      {/each}
+      <div class="boring">
+        {#each diaryData.filter(d=>d.content && d.content.length).map(d => d.content.map(c => ({
+          ...c, title: [d.title, c.title, c.date].filter(v=>v).join(" - ")
+        }))).flat() as content}
+          <Content data={content} />
+        {/each}
+      </div>
     </div>
   {:else}  
     <div class="overflowContainer">
